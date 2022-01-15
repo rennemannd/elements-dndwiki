@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Stonepeople</name>
+        <description>5e homebrew</description>
+        <author url="http://www.dandwiki.com/wiki/5e_Homebrew">D&amp;D Wiki</author>
+        <update version="0.0.4">
+            <file name="race-stonepeople.xml" url="https://raw.githubusercontent.com/rennemannd/elements-dndwiki/master/dndwiki/races/race-stonepeople.xml" />
+        </update>
+    </info>
+
+    <element name="Stonepeople" type="Race" source="D&amp;D Wiki" id="ID_WIKI_RACE_STONEPEOPLE">
+        <description>
+            <h4>PHYSICAL DESCRIPTION</h4>
+            <p>Stonepeople, true to their name, are humanoid look-a-likes that are made of inorganic stone material. They are very similar to gargoyles and living statues in form, but have more of a will and consciousness of their own in comparison. Where the eyes are tend to be two holes from which it is believed whatever essence animating them can "see" out of. Despite being stone, they can move rather fluidly and at a decent speed if they get a running start. Their chiseled bodies are almost always carved to resemble powerful warriors with great muscles and physique. As their body is hard as it is, few ever take to wearing armor. In fact, some just chisel designs on their bodies, as they cannot feel pain.</p>
+            <h4>HISTORY</h4>
+            <p>Stonepeople are believed to be a denizen from the Elemental Plane of Earth. Following the Spellplague, when the planes collapsed into each other, they came to the Material Plane and mainly occupied places like abandoned mines or ruins. For a while, they were regarded as some menace since they could hide as statues in plain sight and this scared a lot of people. However, their luck changed somewhat when they began cooperation with dwarves, usually acting as guards along dangerous mining routes. As such, they now are better known sentinels and guardsmen for hire, and are accepted as such throughout most of the places they frequent.</p>
+            <h4>SOCIETY</h4>
+            <p>Back in the Elemental Plan of Earth, the stonepeople functioned like the humans of that society. They raised xorns and xavers and also traded with occasional business travelers to the realm, trading with them for gems and such. Now stuck in the Material Plane, they have come to adapt more to beings which are "squishier" than the beings of earth and metal they are used to. As they do not have a firm grasp on agriculture with normal plants and animals, they often just do jobs for others, selling off their mighty strength and endurance.</p>
+            <h4>Stonepeople NAMES</h4>
+            <p>Stonepeople are usually named after different types of stone. Their bodies are usually chiseled in the form of a male or female, but other than that, they behave relatively similar. Females sometimes have names after gemstones rather than non-lustrous minerals.</p>
+            <p>
+                <b>Male: </b>Obsidian, Apatite, Shale, Chist, Marble<br/>
+                <b>Female: </b>Ametha, Quartz, Beryl, Opal, Ruby
+            </p>
+            <h4>STONEPEOPLE TRAITS</h4>
+            <p>Stonepeople are statue-esque beings</p>
+            <p>
+                <span class="feature">Ability Score Increase.</span>Your Constitution score increases by 2 and your Strength score increases by 1<br />
+                <span class="feature">Age.</span>Stonepeople manifest from stone usually fully mature. They last for a good 3000 years before they crumble away.<br />
+                <span class="feature">Alignment.</span>Stonepeople, used to being lonesome in the Material Plane, usually have a chaotic alignment.<br />
+                <span class="feature">Size.</span>They average 7 feet in height, and can weight around 600 pounds. Your size is Medium.<br />
+                <span class="feature">Speed.</span>Your base walking speed is 30 feet.<br />
+                <span class="feature">Stone Strength.</span>You count as one size larger when determining your carrying capacity and the weight you can push, drag or lift.<br />
+                <span class="feature">Absorb Earth.</span>If you are standing on stone or earth, you can use your action to bulk up by absorbing the element into yourself. Your size changes to Large, doubling your height and multiplying your weight by 8. The effect lasts for 1 minute. For the duration, you have advantage on Strength checks and saving throws. You must finish a long rest before you can use this trait again.<br />
+                <span class="feature">Elemental.</span>Your creature type is elemental instead of humanoid. Due to your body being entirely composed of stone, you are immune to diseases and being poisoned. Additionally, you may choose to eat rocks, gems, or other such materials instead of normal food.<br />
+                <span class="feature">Stoneskin.</span>You have a base AC of 14 and this cannot be decreased.<br />
+                <span class="feature">Languages.</span>You can speak, read, and write Common and Primordial.<br />
+            </p>
+        </description>
+        <setters>
+            <set name="names" type="male">Obsidian, Apatite, Shale, Chist, Marble</set>
+            <set name="names" type="female">Ametha, Quartz, Beryl, Opal, Ruby</set>
+            <set name="names-format">{{name}}</set>
+            <set name="height" modifier="2d12">7'0"</set>
+            <set name="weight" modifier="1">500</set>
+        </setters>
+        <sheet display="false">
+            <description>Stonepeople are statue-esque beings</description>
+        </sheet>
+        <rules>
+            <stat name="constitution" value="2" />
+            <stat name="strength" value="1" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_STONE_STRENGTH" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_ABSORB_EARTH" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_ELEMENTAL" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_STONESKIN" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_LANGUAGE_PRIMORDIAL" />
+        </rules>
+    </element>
+    <element name="Stone Strength" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_STONE_STRENGTH">
+        <description>
+            <p>You count as one size larger when determining your carrying capacity and the weight you can push, drag or lift.</p>
+        </description>
+        <sheet>
+            <description>You count as one size larger when determining your carrying capacity and the weight you can push, drag or lift.</description>
+        </sheet>
+    </element>
+    <element name="Absorb Earth" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_ABSORB_EARTH">
+        <description>
+            <p>If you are standing on stone or earth, you can use your action to bulk up by absorbing the element into yourself. Your size changes to Large, doubling your height and multiplying your weight by 8. The effect lasts for 1 minute. For the duration, you have advantage on Strength checks and saving throws. You must finish a long rest before you can use this trait again.</p>
+        </description>
+        <sheet action="Action">
+            <description>If you are standing on stone or earth, you can use your action to bulk up by absorbing the element into yourself. Your size changes to Large, doubling your height and multiplying your weight by 8. The effect lasts for 1 minute. For the duration, you have advantage on Strength checks and saving throws. You must finish a long rest before you can use this trait again.</description>
+        </sheet>
+    </element>
+    <element name="Elemental" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_ELEMENTAL">
+        <description>
+            <p>Your creature type is elemental instead of humanoid. Due to your body being entirely composed of stone, you are immune to diseases and being poisoned. Additionally, you may choose to eat rocks, gems, or other such materials instead of normal food.</p>
+        </description>
+        <sheet>
+            <description>Your creature type is elemental instead of humanoid. Due to your body being entirely composed of stone, you are immune to diseases and being poisoned. Additionally, you may choose to eat rocks, gems, or other such materials instead of normal food.</description>
+        </sheet>
+    </element>
+    <element name="Stoneskin" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_STONEPEOPLE_STONESKIN">
+        <description>
+            <p>You have a base AC of 14 and this cannot be decreased.</p>
+        </description>
+        <sheet usage="1/Turn">
+            <description>You have a base AC of 14 and this cannot be decreased.</description>
+        </sheet>
+        <rules>
+			<stat name="stonepeople:stoneskin" value="14" bonus="base" />
+            <stat name="ac:calculation" value="stonepeople:stoneskin" bonus="calculation" alt="Stoneskin (Stonepeople)" />
+        </rules>
+    </element>
+</elements>
