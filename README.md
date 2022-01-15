@@ -1,5 +1,5 @@
 # elements-dndwiki
-Additional content from D&D Wiki to extend [Aurora](http://www.aurorabuilder.com "Aurora Website").
+Custom content from D&D Wiki to extend [Aurora](http://www.aurorabuilder.com "Aurora Website") with content that didn't already exist in [community-elements](https://github.com/community-elements/elements-dndwiki).
 
 ### Extending Content
 Go to the _Additional Content_ tab in Aurora, enter the URL of the index file, and have Aurora download the content to the custom folder for you.
